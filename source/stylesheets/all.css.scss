@@ -1,0 +1,27 @@
+//= require 'normalize'
+//= require 'foundation.min'
+
+body {
+  background-color: #018CAF;
+}
+
+.row {
+  background-color: #ffffff;
+
+  &.blue {
+    background-color: #00B0DD;
+  }
+}
+
+.search {
+  padding: 20px 20px 0px 20px;
+
+  label {
+    color: #ffffff;
+    //font-weight: bold;
+  }
+}
+
+.special {
+  padding: 20px;
+}

@@ -1,1 +1,53 @@
-h1= 'Центр-Юг'
+.row.blue
+  .large-12.columns
+    form.search
+      .row.blue
+        label.large-6.columns
+          = 'Город вылета'
+          select
+            option= 'Москва'
+            option= 'Белгород'
+        label.large-6.columns
+          = 'Город назначения'
+          select
+            option= 'Махачкала'
+            option= 'Белгород'
+            option= 'Магадан'
+      .row.blue
+        label.large-6.columns
+          = 'Туда'
+          input(type='date')
+        label.large-6.columns
+          = 'Обратно'
+          input(type='date')
+      .row.blue
+        .large-12.columns: button.button.radius.alert.right= 'НАЙТИ БИЛЕТЫ'
+    /hr
+.row
+  .special
+    h3 Популярные направления перелетов
+    .large-4.columns
+      img(src='./images/crimea.jpg')
+      h4 This is a content section.
+      p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
+    .large-4.columns
+      img(src='./images/kishenev.jpg')
+      h4 This is a content section.
+      p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
+    .large-4.columns
+      img(src='./images/israel.jpg')
+      h4 This is a content section.
+      p Bacon ipsum dolor sit amet nulla ham qui sint exercitation eiusmod commodo, chuck duis velit. Aute in reprehenderit, dolore aliqua non est magna in labore pig pork biltong. Eiusmod swine spare ribs reprehenderit culpa. Boudin aliqua adipisicing rump corned beef.
+
+footer.row
+  .large-12.columns
+    hr
+    .row
+      .large-6.columns
+        p 2015 © Все права защищены
+      .large-6.columns
+        ul.inline-list.right
+          li: a(href='/about')= 'О компании'
+          li: a(href='/news')= 'Новости'
+          li: a(href='/service')= 'Услуги'
+          li: a(href='/contacts')= 'Контакты'

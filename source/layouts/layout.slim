@@ -6,7 +6,21 @@ html (data-ng-app='App')
     meta(content='text/html;charset=UTF-8' http-equiv='Content-Type')
     meta(content='width=device-width' name='viewport')
 
-    = stylesheet_link_tag :application, media: :all
+    = stylesheet_link_tag :all, media: :all
+    = javascript_include_tag :all, media: :all
 
   body
+    .row
+      .large-3.columns
+        h1
+          img(src='./images/logo300x150.jpg')
+      .large-9.columns
+        ul.right.button-group
+          li: a.button(href='/about')= 'О компании'
+          li: a.button(href='/service')= 'Услуги'
+          li: a.button(href='/news')= 'Новости'
+          li: a.button(href='/contacts')= 'Контакты'
+        p.right(style='font-size: 13px; text-align: right')
+          strong= 'Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран мира.<br/>'.html_safe
+          span(style='color: #777777')= 'Поиск и сравнение цен на авиабилеты среди 100 агентств и 728 авиакомпаний в два клика.'
     = yield
