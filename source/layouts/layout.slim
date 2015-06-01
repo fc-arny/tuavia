@@ -5,22 +5,44 @@ html (data-ng-app='App')
 
     meta(content='text/html;charset=UTF-8' http-equiv='Content-Type')
     meta(content='width=device-width' name='viewport')
+    link(rel='shortcut icon' type='image/x-icon' href='/favicon.ico')
 
     = stylesheet_link_tag :all, media: :all
     = javascript_include_tag :all, media: :all
 
   body
-    .row
+    .row(style='padding: 20px')
       .large-3.columns
         h1
-          img(src='./images/logo300x150.jpg')
+          a(href='/'): img(src='/images/center-south-red.png')
+        div(style='color: #666666')= 'Авиакомпания «Центр-Юг»'
       .large-9.columns
-        ul.right.button-group
-          li: a.button(href='/about')= 'О компании'
-          li: a.button(href='/service')= 'Услуги'
-          li: a.button(href='/news')= 'Новости'
-          li: a.button(href='/contacts')= 'Контакты'
+        ul.inline-list.right
+          li: a(href='/о-компании.html')= 'О компании'
+          li: a(href='/контакты.html')= 'Контакты'
+        .clearfix
         p.right(style='font-size: 13px; text-align: right')
-          strong= 'Мы знаем, где купить авиабилеты дешево. Билеты на самолет в 220 стран мира.<br/>'.html_safe
-          span(style='color: #777777')= 'Поиск и сравнение цен на авиабилеты среди 100 агентств и 728 авиакомпаний в два клика.'
+          strong= 'Официальный сайт Авиакомпании «Центр-Юг».<br/>'.html_safe
+          span(style='color: #999999')= 'Продажа билетов напрямую от перевозчика со скидкой 5%.'
     = yield
+    footer.row
+      .large-12.columns
+        hr
+        .row
+          .large-6.columns
+            p(style='color: #555555')
+              | 2015 © Авиакомпания «Центр-Юг»
+          .large-6.columns
+            ul.inline-list.right
+              li: a(href='/о-компании.html')= 'О компании'
+              /li: a.button(href='/service')= 'Услуги'
+              /li: a.button(href='/news')= 'Новости'
+              li: a(href='/контакты.html')= 'Контакты'
+        hr(style='margin-top: 0')
+        .clearfix
+          .right(style='padding-bottom: 20px')
+            p(style='color: #999999; font-size: 12px; margin-bottom: 5px') Мы примимаем карты следующих платежных систем
+            a.right(href='http://www.ucs.su/' target='_blank'): img(src='/images/payments-small.png')
+
+
+    = javascript_include_tag :analytics, media: :all
