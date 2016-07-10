@@ -1,7 +1,7 @@
 doctype html
 html (data-ng-app='App')
   head
-    title= 'Авиакомпания Тувинские авиалинии. Заказ авиабилетов'
+    title= 'Авиакомпания Тува Авиа. Заказ авиабилетов'
 
     meta(content='text/html;charset=UTF-8' http-equiv='Content-Type')
     meta(content='width=device-width' name='viewport')
@@ -14,7 +14,7 @@ html (data-ng-app='App')
     .row(style='padding: 20px')
       .large-3.small-6.columns
         h1
-          a(href='/'): img(src='/images/logo-new.png')
+          a(href='/'): img(src='/images/tuvaavia.png')
       .large-8.small-6.columns
         ul.inline-list.right
           li: a(href='/о-компании.html')= 'О компании'
@@ -22,7 +22,7 @@ html (data-ng-app='App')
           li: a(href='/контакты.html')= 'Контакты'
         .clearfix
         p.right(style='font-size: 13px; text-align: right')
-          strong= 'Официальный сайт Авиакомпании «Тувинские авиалинии».<br/>'.html_safe
+          strong= 'Официальный сайт Авиакомпании «Тува Авиа».<br/>'.html_safe
           span(style='color: #999999')= 'Услуги по продаже авиабилетов предоставляет интернет-магазин ООО «Восток АвиаТранс»'
     = yield
     footer.row
@@ -31,7 +31,7 @@ html (data-ng-app='App')
         .row
           .large-6.columns
             p(style='color: #555555')
-              | 2016 © Авиакомпания «Тувинские авиалинии»
+              | 2016 © Авиакомпания «Тува Авиа»
           .large-6.columns
             ul.inline-list.right
               li: a(href='/о-компании.html')= 'О компании'
