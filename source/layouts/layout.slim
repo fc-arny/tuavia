@@ -18,25 +18,34 @@ html (data-ng-app='App')
       .large-8.small-6.columns
         ul.inline-list.right
           li: a(href='/о-компании.html')= 'О компании'
+          li: a(href='/расписание.html')= 'Расписание'
           li: a(href='/поддержка.html')= 'Поддержка'
           li: a(href='/контакты.html')= 'Контакты'
         .clearfix
         p.right(style='font-size: 13px; text-align: right')
           strong= 'Официальный сайт Авиакомпании «Тува Авиа».<br/>'.html_safe
           span(style='color: #999999')= 'Услуги по продаже авиабилетов предоставляет интернет-магазин ООО «Восток АвиаТранс»'
+    .row.blue
+      .large-12.columns
+        form.search(action='http://билет.центр-юг.рф')
+          .row.blue
+          .row.blue
+            .large-9.columns
+              h4(style='color: #ffffff')= 'Продажа билетов напрямую от перевозчика'
+            .large-3.columns
+              button.button.small.radius.alert.right= 'НАЙТИ БИЛЕТЫ'
     = yield
     footer.row
       .large-12.columns
         hr
         .row
-          .large-6.columns
+          .large-4.columns
             p(style='color: #555555')
               | 2017 © Авиакомпания «Тува Авиа»
-          .large-6.columns
+          .large-8.columns
             ul.inline-list.right
               li: a(href='/о-компании.html')= 'О компании'
-              li: a(href='/поддержка.html')= 'Поддержка'
-              /li: a.button(href='/news')= 'Новости'
+              li: a href='/Правила.pdf' Правила
               li: a(href='/контакты.html')= 'Контакты'
         hr(style='margin-top: 0')
         .clearfix
